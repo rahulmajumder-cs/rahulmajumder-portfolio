@@ -37,16 +37,18 @@ export function Education() {
                 </div>
               </motion.div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-background rounded-3xl p-8 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold mb-2">{education.secondary.degree}</h3>
-                <p className="text-muted-foreground leading-relaxed">{education.secondary.description}</p>
-              </motion.div>
+              {(education as any).secondary && (
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-background rounded-3xl p-8 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                >
+                  <h3 className="text-xl font-semibold mb-2">{(education as any).secondary.degree}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{(education as any).secondary.description}</p>
+                </motion.div>
+              )}
             </div>
           </div>
 

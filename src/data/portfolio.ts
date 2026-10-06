@@ -72,10 +72,10 @@ export const education = {
     years: "2023–2027",
     status: "7th Semester"
   },
-  secondary: {
-    degree: "Diploma in Pharmacy (D.Pharm)",
-    description: "Additional academic background"
-  }
+  // secondary: {
+  //   degree: "Diploma in Pharmacy (D.Pharm)",
+  //   description: "Additional academic background"
+  // }
 };
 
 export const certifications = {
