@@ -13,7 +13,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="text-3xl md:text-4xl font-bold tracking-tight mb-8"
+            className="text-3xl md:text-4xl font-bold tracking-tight mb-8 text-balance"
           >
             About Me
           </motion.h2>

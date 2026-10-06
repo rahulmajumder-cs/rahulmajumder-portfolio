@@ -15,7 +15,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-5xl font-bold tracking-tight mb-6"
+          className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance"
         >
           {contact.heading}
         </motion.h2>
@@ -25,7 +25,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-lg text-muted-foreground mb-10"
+          className="text-lg md:text-xl text-muted-foreground mb-10 text-balance leading-relaxed mx-auto max-w-xl"
         >
           {contact.description}
         </motion.p>
@@ -63,7 +63,7 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border py-12 bg-background">
+    <footer className="border-t border-border py-16 md:py-24 bg-background">
       <Container className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-center md:text-left">
           <p className="font-semibold">{config.name}</p>

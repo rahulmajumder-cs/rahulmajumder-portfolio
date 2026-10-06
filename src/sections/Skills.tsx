@@ -32,7 +32,7 @@ export function Skills() {
                 {group.items.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="inline-flex items-center rounded-md bg-muted px-3 py-1.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground hover:text-background"
+                    className="inline-flex items-center rounded-full bg-muted/80 border border-transparent px-4 py-2 text-sm font-medium text-foreground transition-all duration-300 hover:bg-foreground hover:text-background hover:shadow-sm hover:-translate-y-0.5"
                   >
                     {skill}
                   </span>

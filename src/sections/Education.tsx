@@ -27,11 +27,11 @@ export function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="bg-background rounded-2xl p-6 border border-border"
+                className="bg-background rounded-3xl p-8 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="text-sm font-medium text-muted-foreground mb-2">{education.primary.years} • {education.primary.status}</div>
-                <h3 className="text-xl font-semibold">{education.primary.degree}</h3>
-                <div className="text-muted-foreground mt-1">
+                <div className="text-sm font-medium text-muted-foreground mb-3">{education.primary.years} • {education.primary.status}</div>
+                <h3 className="text-2xl font-semibold mb-1">{education.primary.degree}</h3>
+                <div className="text-muted-foreground leading-relaxed">
                   <p>{education.primary.institution}</p>
                   <p>{education.primary.university}</p>
                 </div>
@@ -42,10 +42,10 @@ export function Education() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="bg-background rounded-2xl p-6 border border-border"
+                className="bg-background rounded-3xl p-8 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <h3 className="text-lg font-semibold">{education.secondary.degree}</h3>
-                <p className="text-muted-foreground mt-1">{education.secondary.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{education.secondary.degree}</h3>
+                <p className="text-muted-foreground leading-relaxed">{education.secondary.description}</p>
               </motion.div>
             </div>
           </div>
@@ -70,10 +70,10 @@ export function Education() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex flex-col p-5 rounded-xl bg-background border border-border transition-colors hover:border-foreground/20"
+                  className="flex flex-col p-6 rounded-2xl bg-background border border-border transition-all duration-300 hover:border-foreground/30 hover:shadow-md hover:-translate-y-0.5"
                 >
-                  <h4 className="font-medium text-foreground">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground mt-1">{item.issuer}</p>
+                  <h4 className="font-semibold text-foreground text-lg">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground mt-1.5">{item.issuer}</p>
                 </motion.div>
               ))}
             </div>

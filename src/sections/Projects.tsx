@@ -24,14 +24,14 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="group relative overflow-hidden rounded-3xl bg-background border border-border transition-colors hover:border-foreground/30 p-8 md:p-12"
+          className="group relative overflow-hidden rounded-3xl bg-background border border-border transition-all duration-300 hover:border-foreground/30 hover:shadow-xl hover:-translate-y-1 p-8 md:p-12"
         >
           <div className="max-w-2xl space-y-6">
             <div className="inline-flex items-center rounded-full border border-border bg-muted/50 px-3 py-1 text-xs font-medium text-muted-foreground">
               {project.category}
             </div>
             
-            <h3 className="text-2xl md:text-3xl font-bold">
+            <h3 className="text-2xl md:text-3xl font-bold text-balance">
               {project.title}
             </h3>
             

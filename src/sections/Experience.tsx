@@ -25,7 +25,7 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 p-6 rounded-2xl bg-background border border-border hover:border-foreground/20 transition-colors group"
+              className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 p-6 rounded-3xl bg-background border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="md:w-32 flex-shrink-0 text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
                 {item.year}

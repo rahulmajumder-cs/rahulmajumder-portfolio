@@ -14,16 +14,16 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="flex flex-col space-y-6"
         >
-          <div className="space-y-4">
-            <h2 className="text-sm font-semibold tracking-wide text-muted-foreground uppercase">
+          <div className="space-y-6">
+            <h2 className="text-sm font-bold tracking-widest text-muted-foreground uppercase">
               {config.role}
             </h2>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-balance leading-tight">
               {config.name}
             </h1>
           </div>
           
-          <div className="space-y-4 text-lg md:text-xl text-muted-foreground max-w-lg">
+          <div className="space-y-4 text-lg md:text-xl text-muted-foreground max-w-lg text-balance pt-2">
             <p className="leading-relaxed">
               {config.description}
             </p>
@@ -32,7 +32,7 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-4">
+          <div className="flex flex-wrap gap-4 pt-6">
             <Button asChild>
               <a href="#projects">View Projects</a>
             </Button>

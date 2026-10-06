@@ -12,13 +12,13 @@ const Button = forwardRef<HTMLButtonElement | HTMLDivElement, ButtonProps>(
   ({ children, className, variant = "primary", asChild, ...props }, ref) => {
     const Component = asChild ? "div" : "button";
     
-    const baseStyles = "inline-flex items-center justify-center rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2";
+    const baseStyles = "inline-flex items-center justify-center rounded-full text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-6 py-2.5";
     
     const variants = {
-      primary: "bg-foreground text-background hover:bg-foreground/90",
-      secondary: "bg-muted text-foreground hover:bg-muted/80",
-      outline: "border border-border bg-background hover:bg-muted hover:text-foreground",
-      ghost: "hover:bg-muted hover:text-foreground",
+      primary: "bg-foreground text-background hover:bg-foreground/90 hover:shadow-md hover:-translate-y-0.5",
+      secondary: "bg-muted text-foreground hover:bg-muted/80 hover:-translate-y-0.5",
+      outline: "border border-border bg-background hover:bg-muted hover:text-foreground hover:-translate-y-0.5",
+      ghost: "hover:bg-muted hover:text-foreground hover:-translate-y-0.5",
     };
 
     return (
