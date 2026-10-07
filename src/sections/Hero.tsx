@@ -3,6 +3,7 @@ import { config } from "../data/portfolio";
 import { Section } from "../components/ui/Section";
 import { Container } from "../components/ui/Container";
 import { Button } from "../components/ui/Button";
+import { TiltCard } from "../components/ui/TiltCard";
 
 export function Hero() {
   return (
@@ -46,16 +47,24 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative lg:ml-auto max-w-sm lg:max-w-md w-full aspect-[4/5]"
+          className="relative lg:ml-auto max-w-sm lg:max-w-md w-full aspect-[4/5] perspective-1000"
         >
-          <div className="absolute inset-0 bg-muted rounded-2xl -rotate-6 transform origin-bottom-left transition-transform hover:-rotate-2 duration-300"></div>
-          <div className="absolute inset-0 overflow-hidden rounded-2xl bg-muted border border-border">
-            <img 
-              src="/assets/profile.jpg" 
-              alt={config.name} 
-              className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
-            />
-          </div>
+          <TiltCard tiltAmount={12} className="w-full h-full">
+            <div 
+              className="absolute inset-0 bg-muted rounded-3xl -rotate-6 transform origin-bottom-left transition-transform hover:-rotate-3 duration-500 shadow-xl"
+              style={{ transform: "translateZ(-20px) rotate(-6deg)" }}
+            ></div>
+            <div 
+              className="absolute inset-0 overflow-hidden rounded-3xl bg-muted border border-border/50 shadow-2xl"
+              style={{ transform: "translateZ(30px)" }}
+            >
+              <img 
+                src="/assets/profile.jpg" 
+                alt={config.name} 
+                className="object-cover w-full h-full scale-105 hover:scale-110 transition-transform duration-700"
+              />
+            </div>
+          </TiltCard>
         </motion.div>
       </Container>
     </Section>

@@ -6,10 +6,12 @@ import { Projects } from "./sections/Projects";
 import { Skills } from "./sections/Skills";
 import { Education } from "./sections/Education";
 import { Contact, Footer } from "./sections/Contact";
+import { Background } from "./components/ui/Background";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-foreground selection:text-background">
+    <div className="min-h-screen bg-transparent font-sans text-foreground selection:bg-foreground selection:text-background">
+      <Background />
       <Header />
       <main>
         <Hero />
