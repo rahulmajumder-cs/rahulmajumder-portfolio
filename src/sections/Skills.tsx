@@ -29,7 +29,7 @@ export function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1, type: "spring", bounce: 0.2 }}
-                className="relative space-y-8 bg-background/60 backdrop-blur-xl p-10 rounded-[2.5rem] border border-border/50 transition-all duration-700 hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 h-full overflow-hidden group"
+                className="relative space-y-8 bg-background/95 md:bg-background/60 md:backdrop-blur-xl p-10 rounded-[2.5rem] border border-border/50 transition-all duration-700 hover:border-accent/40 hover:shadow-2xl hover:shadow-accent/5 h-full overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 

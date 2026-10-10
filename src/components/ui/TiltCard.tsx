@@ -57,11 +57,11 @@ export function TiltCard({ children, className = "", tiltAmount = 15 }: TiltCard
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{
-        rotateX: isHoverable ? rotateX : 0,
-        rotateY: isHoverable ? rotateY : 0,
+      style={isHoverable ? {
+        rotateX,
+        rotateY,
         transformStyle: "preserve-3d",
-      }}
+      } : undefined}
       className={`relative ${className}`}
     >
       {children}

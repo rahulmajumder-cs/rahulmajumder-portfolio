@@ -1,40 +1,20 @@
-import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function Background() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
   const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      // Reduce frequency of updates if needed, or just let React handle it
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
     <div className="fixed inset-0 z-[-1] overflow-hidden bg-background pointer-events-none">
-      {/* Subtle radial light following cursor */}
-      <div 
-        className="absolute inset-0 transition-opacity duration-1000"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, var(--color-foreground), transparent 40%)`,
-          opacity: 0.03, // Very subtle
-        }}
-      />
-      
-      {/* Abstract geometric background shapes for depth */}
+      {/* Abstract geometric background shapes for depth - Hidden on mobile for performance */}
       <motion.div 
         style={{ y: y1 }}
-        className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-foreground/5 blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-50"
+        className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-foreground/5 blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-50 hidden md:block"
       />
       <motion.div 
         style={{ y: y2 }}
-        className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-foreground/5 blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-50"
+        className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-foreground/5 blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-50 hidden md:block"
       />
       
       {/* Subtle Grid / Noise pattern */}

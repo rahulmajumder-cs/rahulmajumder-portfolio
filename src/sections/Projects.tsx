@@ -35,11 +35,11 @@ export function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
-            className="relative overflow-hidden rounded-[2.5rem] border border-border/50 transition-all duration-700 hover:border-accent/40 shadow-2xl hover:shadow-accent/20 bg-background/60 backdrop-blur-xl min-h-[600px] flex flex-col justify-end p-8 md:p-16 lg:p-20"
+            className="relative overflow-hidden rounded-[2.5rem] border border-border/50 transition-all duration-700 md:hover:border-accent/40 shadow-xl md:shadow-2xl md:hover:shadow-accent/20 bg-background/95 md:bg-background/60 md:backdrop-blur-xl min-h-[600px] flex flex-col justify-end p-8 md:p-16 lg:p-20"
             style={{ transform: "translateZ(20px)" }}
           >
             {/* Abstract ML/Data Visualization Background */}
-            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity duration-1000">
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-20 md:opacity-40 group-hover:opacity-70 transition-opacity duration-1000 hidden sm:block">
               <div className="absolute top-0 right-0 w-[80vw] max-w-[800px] h-[80vw] max-h-[800px] rounded-full bg-[radial-gradient(circle_at_center,_var(--color-accent),_transparent_70%)] opacity-10 translate-x-1/3 -translate-y-1/3 mix-blend-screen" />
               
               {/* Grid lines */}

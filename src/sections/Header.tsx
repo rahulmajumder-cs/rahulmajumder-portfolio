@@ -14,25 +14,35 @@ export function Header() {
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Certificates", href: "#certificates" },
+    { name: "Resume", href: "#resume" },
     { name: "Contact", href: "#contact" },
   ];
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      
-      const sections = navLinks.map(link => link.href.substring(1));
-      let current = "";
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element && window.scrollY >= (element.offsetTop - 300)) {
-          current = section;
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          
+          const sections = navLinks.map(link => link.href.substring(1));
+          let current = "";
+          for (const section of sections) {
+            const element = document.getElementById(section);
+            if (element && window.scrollY >= (element.offsetTop - 300)) {
+              current = section;
+            }
+          }
+          setActiveSection(current);
+          ticking = false;
+        });
+        ticking = true;
       }
-      setActiveSection(current);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
